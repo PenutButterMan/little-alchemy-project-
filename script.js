@@ -4,7 +4,7 @@ async function loadElements() {
         .from('elements')
         .select('*');
 
-    """Grabs Two Elements From HTML"""
+"""Grabs Two Elements From HTML"""
     const dropdown1 = document.getElementById('element1');
     const dropdown2 = document.getElementById('element2');
 
@@ -16,7 +16,7 @@ async function loadElements() {
         dropdown2.add(option2);
     });
 }
-
+"""Combine Elements"""
 async function combineElements() {
     const e1 = document.getElementById('element1').value;
     const e2 = document.getElementById('element2').value;
@@ -26,6 +26,7 @@ async function combineElements() {
         .select('result_id')
         .or(`and(element1_id.eq.${e1},element2_id.eq.${e2}),and(element1_id.eq.${e2},element2_id.eq.${e1})`);
 
+"""In Case No Result Is Found"""
     if (data.length === 0) {
         document.getElementById('result').innerText = "Result: Nothing found";
         return;
@@ -33,6 +34,7 @@ async function combineElements() {
 
     const resultId = data[0].result_id;
 
+"""Getting Result Name"""
     const { data: resultData } = await supabase
         .from('elements')
         .select('element_name')
