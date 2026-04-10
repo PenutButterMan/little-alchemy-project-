@@ -1,8 +1,10 @@
+"""Fill In The Drop Downs"""
 async function loadElements() {
     const { data, error } = await supabase
         .from('elements')
         .select('*');
 
+    """Grabs Two Elements From HTML"""
     const dropdown1 = document.getElementById('element1');
     const dropdown2 = document.getElementById('element2');
 
