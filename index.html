@@ -7,7 +7,7 @@
         - Loads the CSS styles for the app.
         - Loads the Supabase client library.
     -->
-    <title>Element Combiner</title>
+    <title>⚱ Alchemical Forge ⚱</title>
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
@@ -15,29 +15,27 @@
 <body>
 
     <!-- Page title -->
-    <h1>Element Combiner</h1>
+    <h1>⚱ Alchemical Forge ⚱</h1>
 
     <!-- Main app container: element list + combine area + result -->
     <div class="container">
       <!-- Left panel: available elements to drag -->
       <div class="elements-section">
-        <h2>Available Elements</h2>
+        <h2>⚗️ Available Elements</h2>
         <div id="elementsList" class="elements-list"></div>
       </div>
 
-      <!-- Center panel: drag/drop combination area -->
+      <!-- Center panel: free-form combination area -->
       <div class="combine-section">
-        <div class="drop-zones">
-          <div id="dropZone1" class="drop-zone">Drag element here</div>
-          <span class="plus-sign">+</span>
-          <div id="dropZone2" class="drop-zone">Drag element here</div>
-        </div>
-        <button id="clearBtn" class="clear-btn">Clear</button>
+        <h2>⚱ Alchemical Cauldron</h2>
+        <p class="instructions">Drag elements from the left into the cauldron, then move them together to combine.</p>
+        <div id="combineArea" class="combine-area"></div>
+        <button id="clearBtn" class="clear-btn">Clear All</button>
       </div>
 
       <!-- Bottom panel: show current result -->
       <div class="result-section">
-        <h2 id="result">Result: </h2>
+        <h2 id="result">✨ Result: </h2>
       </div>
     </div>
 
