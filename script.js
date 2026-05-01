@@ -104,7 +104,7 @@ async function loadElements() {
         data.forEach((element) => {
             // Show element if it is part of the starting set (IDs 1-17)
             // or if it has already been discovered by the user.
-            const shouldDisplay = element.id <= 17 || discoveredElements.has(element.id);
+            const shouldDisplay = element.id <= 18 || discoveredElements.has(element.id);
 
             if (shouldDisplay) {
                 console.log(`Adding element:`, element.element_name, element.id);
